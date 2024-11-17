@@ -6,13 +6,17 @@ import {
     IconContainer
 } from './styled';
 
-export const EmptyView = ({ message, icon }) => {
+export const EmptyView = ({
+    message,
+    icon,
+    shouldFillParent = true
+}) => {
     const theme = useTheme();
 
     const { Icon } = theme;
 
     return (
-        <EmptyRoot>
+        <EmptyRoot shouldFillParent={shouldFillParent}>
             <IconContainer>
                 <Icon
                     name={icon}

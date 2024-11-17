@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import { Subheading } from 'react-native-paper';
 
 export const EmptyRoot = styled.View`
-    flex: 1;
+    ${({ shouldFillParent }) => shouldFillParent && 'flex: 1;'}
     display: flex;
     flex-direction: column;
     align-items: center;
